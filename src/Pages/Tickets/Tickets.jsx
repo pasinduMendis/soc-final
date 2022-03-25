@@ -7,12 +7,14 @@ import "./tickets.scss";
 const Tickets = () => {
   const [Loading, setLoading] = useState(false);
   const [tickets, setTickets] = useState([]);
+  
   useEffect(() => {
     async function fetchTickets() {
       scrollLock();
       const request = await axios
         .get(`${requests.fetchUserTickets}` + "/menadithrox1@gmail.com")
         .then((res) => {
+          // eslint-disable-next-line
           setLoading(true);
           setTickets(res.data);
           scrollOn();
