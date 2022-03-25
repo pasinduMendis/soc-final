@@ -54,7 +54,7 @@ const Main = (props) => {
       </div>
 
       <div className='m-5 row'>
-        <div className=' col-lg-5 col-md-12 d-flex justify-content-center'>
+        <div className=' col-lg-5 col-md-12 d-flex justify-content-center  d-none d-lg-block'>
           <Carousel
             autoPlay={true}
             infiniteLoop={true}
