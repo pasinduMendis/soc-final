@@ -1,0 +1,316 @@
+a {
+  text-decoration: none;
+  color: #5c7fb8;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.app {
+  background-color: #1a1a1a;
+}
+
+.movie-card {
+  font: 14px/22px "Lato", Arial, sans-serif;
+  color: #a9a8a3;
+  position: relative;
+  overflow: hidden;
+}
+
+.containerCard {
+  margin: 0 auto;
+  width: 100%;
+  height: 100vh;
+  background: rgb(26, 26, 26);
+  border-radius: 5px;
+  position: relative;
+}
+
+.hero {
+  // height: 400px;
+  height: 60%;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.hero:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  // background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/hobbit_bg.jpg");
+  z-index: -1;
+  transform: skewY(-2.2deg);
+  transform-origin: 0 0;
+  -webkit-backface-visibility: hidden;
+}
+
+.coverImg {
+  position: absolute;
+  z-index: -2;
+  height: 100%;
+  // transform: translate(0, -308px);
+  filter: brightness(0.6);
+}
+
+.movieTrailer {
+  width: 100%;
+  position: absolute;
+  bottom: 60%;
+  height: 100%;
+}
+.hero iframe {
+  width: 100%;
+  height: 200%;
+}
+
+.fadebottom2 {
+  position: absolute;
+  width: 100%;
+  z-index: 5;
+  top: 21%;
+  height: 80%;
+  background: #1f1f1f;
+  background: linear-gradient(
+    0deg,
+    #1a1a1a 0%,
+    rgb(0 0 0 / 48%) 25%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+.cinemaTag {
+  position: absolute;
+  right: 0;
+  top: 12%;
+  z-index: 10;
+  color: rgb(255, 255, 255);
+  // background-color: rgb(22, 22, 22);
+  padding: 10px 25px;
+  border-radius: 20px 0 0 20px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  transform: translateX(70%);
+  overflow: hidden;
+  animation: tagAnim 2s infinite;
+  transition: transform 1s ease-in-out;
+
+  span {
+    font-family: "Poppins", sans-serif;
+    font-size: 25px;
+  }
+
+  &:hover {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes tagAnim {
+  0% {
+    transform: translateX(70%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .coverImg {
+    // height: 100%;
+    // width: 120%;
+    // transform: translate(0, 0);
+  }
+  .hero iframe {
+    position: absolute;
+    left: -70%;
+    width: 250%;
+    display: none;
+  }
+}
+@media (min-width: 800px) and (max-width: 1200px) {
+  .coverImg {
+    width: 100%;
+    height: auto;
+  }
+  .hero iframe {
+    width: 100%;
+    height: 200%;
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .hero iframe {
+    position: absolute;
+    width: 100%;
+    height: 250%;
+    top: -5%;
+  }
+  .coverImg {
+    width: 100%;
+    height: auto;
+    display: none;
+  }
+}
+
+.cover {
+  position: absolute;
+  top: 160px;
+  left: 40px;
+  z-index: 2;
+  width: 180px;
+}
+
+.details {
+  padding: 190px 0 0 240px;
+  position: relative;
+  z-index: 5;
+}
+.details .title1 {
+  color: white;
+  font-size: 25px;
+  margin-bottom: 13px;
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  -webkit-filter: drop-shadow(10px 10px 10px #000000);
+  filter: drop-shadow(10px 10px 10px #000000);
+}
+.details .title1 span {
+  position: absolute;
+  top: 3px;
+  margin-left: 12px;
+  background: #029400;
+  border-radius: 5px;
+  color: #544c21;
+  font-size: 14px;
+  padding: 0px 4px;
+}
+.details .title2 {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  -webkit-filter: drop-shadow(10px 10px 10px #000000);
+  filter: drop-shadow(10px 10px 10px #000000);
+}
+.details .likes {
+  color: white;
+  position: relative;
+}
+.details .likes:before {
+  content: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/icon_like.png");
+  position: relative;
+  top: 2px;
+  padding-right: 7px;
+}
+
+.description {
+  bottom: 0px;
+  height: 90px;
+  font-size: 16px;
+  color: #b1b0ac;
+}
+
+.qualites {
+  color: rgb(255, 255, 255);
+  font-size: 12px;
+  background-color: rgb(149, 149, 149);
+  width: 170px;
+  padding: 2px 8px;
+  margin: 5px 50px;
+}
+.languages {
+  color: rgb(255, 255, 255);
+  width: 70%;
+  padding: 2px 50px;
+}
+.runtime {
+  color: rgb(255, 255, 255);
+  width: 30%;
+  padding: 2px 50px;
+}
+
+.column1 {
+  padding-left: 40px;
+  padding-top: 40px;
+  float: left;
+  text-align: center;
+}
+
+.ticketButton {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 500;
+  color: white;
+  border-radius: 30px;
+  position: relative;
+  text-decoration: none;
+  background-color: #288600;
+  width: 110px;
+  padding: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: #25f500;
+    color: black;
+  }
+}
+
+.ticketButtonNA {
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 500;
+  color: rgb(224, 224, 224);
+  border-radius: 30px;
+  position: relative;
+  text-decoration: none;
+  background-color: #5c5c5c;
+  width: 110px;
+  padding: 10px;
+  cursor: not-allowed;
+  pointer-events: all !important;
+}
+
+.tag {
+  background: #029400;
+  color: white;
+  border-radius: 10px;
+  padding: 3px 8px;
+  font-size: 14px;
+  margin-right: 4px;
+  line-height: 35px;
+}
+
+.column2 {
+  width: 80%;
+  float: left;
+  padding-left: 50px;
+}
+
+.ticketButtonDiv {
+  margin-top: 15px;
+}
+
+.posterContainer {
+  position: relative;
+  .trailerPlayBooking {
+    position: absolute;
+    border-radius: 0 15px 15px 0;
+    padding-right: 10px;
+    background-color: rgb(146, 146, 146);
+    color: white;
+    z-index: 99;
+    top: 400px;
+    left: 40px;
+  }
+}

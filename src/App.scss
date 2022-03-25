@@ -1,0 +1,48 @@
+* {
+  font-family: "Roboto", sans-serif;
+  /* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  * {
+    scrollbar-width: thin;
+  }
+
+  /* Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  *::-webkit-scrollbar-track {
+    background: #ffffff00;
+  }
+
+  *::-webkit-scrollbar-thumb {
+    background-color: #00e70c;
+    border-radius: 20px;
+  }
+}
+
+:root {
+  --main-color: #0b0b0b;
+}
+
+.text-success {
+  position: absolute;
+  z-index: 999;
+  left: 48%;
+  bottom: 50%;
+  color: #00e70c !important;
+}
+.spinner-border {
+  width: 3rem !important;
+  height: 3rem !important;
+}
+.spinnerBack {
+  background-color: black;
+  height: 100vh;
+}
+
+@media only screen and (max-width: 762px) {
+  .text-success {
+    left: 44%;
+  }
+}

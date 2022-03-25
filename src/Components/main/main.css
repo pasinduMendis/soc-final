@@ -1,0 +1,55 @@
+.mainPage {
+  min-height: 100vh;
+  max-width: 100vw;
+  background-image: url('https://thumbs.gfycat.com/EarlyAntiqueIbizanhound-max-1mb.gif');
+  background-repeat: no-repeat;
+  color: lime;
+
+  background-size: 100% 100%;
+}
+
+.mainPage h1 {
+  opacity: 0.8;
+  padding: 1%;
+  text-shadow: 0 0 10px white;
+}
+
+.carImge {
+  width: 80%;
+  border: solid 5px white;
+  opacity: 0.9;
+}
+
+.carImge img {
+  width: 100%;
+  height: 75vh;
+  object-fit: fill;
+}
+
+.mainContents {
+  background-color: black;
+  opacity: 0.8;
+  border: solid 5px white;
+}
+
+.btnSign {
+  background-color: black;
+  border-color: lime;
+  color: white;
+  font-weight: bold;
+  opacity: 0.8;
+  margin: 1%;
+}
+
+.btnSign:hover {
+  background-color: lime;
+  border-color: white;
+  color: black;
+  opacity: 1;
+  margin: 1%;
+}
+
+.mainTopBar {
+  height: 60px;
+  width: 100vw;
+}

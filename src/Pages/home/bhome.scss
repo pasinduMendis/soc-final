@@ -1,0 +1,176 @@
+.bookingHome {
+  background-color: #1a1a1a;
+}
+
+.buttonLike {
+  color: rgb(255, 255, 255);
+  float: right;
+  margin: 10px;
+  background-color: #696969;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.spacer2 {
+  margin-bottom: 50px;
+}
+
+// Spinner parent
+#spinner {
+  width: 52px;
+  height: 52px;
+  display: block;
+  cursor: pointer;
+  float: right;
+  margin: 15px;
+}
+
+// Spinner child - svg line anim
+svg.spinner-webkit {
+  width: 40px;
+  height: 40px;
+
+  path {
+    stroke-dasharray: 329;
+    stroke-dashoffset: 0;
+    stroke: #57ad56;
+    stroke-width: 1.8px;
+    animation: draw 4s ease-in-out infinite;
+    fill: transparent;
+    fill-opacity: 0;
+  }
+
+  @keyframes draw {
+    100% {
+      stroke-dasharray: 329;
+      stroke-dashoffset: 658;
+    }
+  }
+}
+
+//Spinner child - non-svg anim IE fallback
+.spinner-ie {
+  width: 32px;
+  height: 32px;
+  display: none;
+  animation: spin 0.5s linear infinite;
+  border: 2px solid transparent;
+  border-top: 2px solid #57ad56;
+  border-left: 2px solid #57ad56;
+  border-radius: 50px;
+  cursor: pointer;
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+// Hide SVG anim and display regular spinner for IE10+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .spinner-webkit {
+    display: none;
+  }
+
+  .spinner-ie {
+    display: block;
+  }
+}
+
+.movie {
+  margin: 1rem;
+  width: 175px;
+  height: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  transition: 0.5s;
+}
+
+.movie img {
+  max-width: 100%;
+}
+
+.movie_container {
+  display: flex;
+  flex-wrap: wrap;
+  color: #1a1a1a;
+  justify-content: center;
+}
+
+.movie_container::after {
+  justify-content: left;
+}
+
+.movie-info {
+  display: flex;
+  padding: 2px 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.movie-info h3 {
+  margin: 0;
+}
+
+.movie-over {
+  background-color: rgb(15, 15, 15);
+  color: rgb(170, 170, 170);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  border-radius: 15px;
+  overflow: hidden;
+  max-height: 100%;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.movie:hover .movie-over {
+  transform: translateX(0%);
+}
+
+.movie:hover {
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 800px) {
+  .movie {
+    margin: 1rem;
+    width: 150px;
+    height: 230px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s;
+  }
+}
+
+.info {
+  text-transform: uppercase;
+  font-size: 15px;
+  text-decoration: none;
+  background-color: rgb(0, 165, 0);
+  transition: 0.5s;
+  padding: 5px;
+  color: white;
+  border-radius: 5px;
+}
+
+.info:hover {
+  background-color: rgb(0, 224, 0);
+  text-decoration: none;
+}
+
+.title {
+  padding: 50px 60px;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+}

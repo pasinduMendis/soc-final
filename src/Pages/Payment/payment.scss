@@ -1,0 +1,173 @@
+.ticket {
+  font-family: sans-serif;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+  background-color: #04030c;
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  -webkit-filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
+  display: block;
+  margin: 0% auto auto auto;
+  color: #fff;
+}
+
+.date {
+  float: right;
+  -webkit-filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
+  filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
+  padding-right: 15px;
+}
+
+.date .day {
+  float: right;
+  font-size: 80px;
+}
+
+.date .month-and-time {
+  float: left;
+  margin: 25px 0 0 0;
+  font-weight: bold;
+}
+
+.artist {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0px 138px 0 17px;
+  padding: 20px;
+
+  span {
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+.cta {
+  color: rgb(0, 0, 0);
+  float: right;
+}
+
+.small {
+  font-weight: 200;
+}
+
+.payment_fadebottom {
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+  bottom: 0;
+  height: 18vh;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgb(0 0 0 / 52%),
+    #000000
+  );
+}
+
+.bookedTickets {
+  padding: 40px;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+
+  span {
+    font-size: 13px;
+    color: rgb(194, 194, 194);
+  }
+}
+
+.st_dtts_wrapper {
+  margin-top: 110px;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.st_cherity_section {
+  margin-top: 30px;
+  background: #ffffff;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 12%);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.st_cherity_btn {
+  padding-top: 30px;
+}
+
+.StripeCheckout {
+  overflow: hidden;
+  display: inline-block;
+  background: linear-gradient(rgb(40, 160, 229), rgb(1, 94, 148));
+  padding: 6px !important;
+  width: 100%;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: rgb(0 0 0 / 20%) 0px 1px 0px;
+  cursor: pointer;
+  visibility: visible;
+  user-select: none;
+}
+
+.spacer {
+  margin-bottom: 30px;
+}
+
+// aaaaaaaaaaaaaaaaaaaa
+
+.st_dtts_bs_wrapper {
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgb(0 0 0 / 12%);
+  border-radius: 12px;
+}
+.st_dtts_bs_heading {
+  background: rgb(87, 87, 87);
+  padding: 12px 20px;
+  border-radius: 10px 10px 0 0;
+}
+.st_dtts_bs_heading p {
+  font-size: 25px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.st_dtts_sb_ul {
+  padding: 20px;
+  padding-bottom: 80px;
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.54);
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.st_dtts_sb_ul li:first-child {
+  margin-top: 0;
+}
+.st_dtts_sb_ul li {
+  font-size: 14px;
+  color: #333545;
+  letter-spacing: 1px;
+  float: left;
+  width: 100%;
+  margin-top: 20px;
+}
+.st_dtts_sb_ul li span {
+  float: right;
+  margin-top: -22px;
+}
+
+.st_dtts_sb_h2 {
+  padding: 20px;
+}
+
+.st_dtts_sb_h2 h5 {
+  padding-top: 30px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.87);
+  letter-spacing: 0;
+  font-weight: 800;
+}
+.st_dtts_sb_h2 h5 span {
+  float: right;
+}

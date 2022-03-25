@@ -1,0 +1,34 @@
+.FoodHeaderSub {
+  text-align: center;
+  font-family: Pacifico, serif;
+  color: rgb(255, 172, 47);
+  font-size: 22px;
+}
+.FoodHeaderMain {
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+.foodItem {
+  margin-bottom: 20px;
+
+  h4 {
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+  }
+  p {
+    color: rgb(205, 205, 205);
+  }
+  h5 {
+    color: #ffb800;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .foodItem {
+    img {
+      float: left;
+      margin-right: 25px;
+    }
+  }
+}
