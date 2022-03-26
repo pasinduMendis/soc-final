@@ -20,7 +20,7 @@ const SignIn = (props) => {
     axios.get('https://soc-server-web.herokuapp.com/user/check2/' + email).then((res) => {
       // eslint-disable-next-line
 
-      setUrlPage(`/`)
+      setUrlPage(`/home`)
       //setId(res.data._id)
     })
     //window.alert(id)

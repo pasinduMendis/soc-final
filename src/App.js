@@ -24,7 +24,7 @@ function App() {
     <Router>
       <div className="app">
         {(token != null)?
-            <Navbar />:<div>abc</div>
+            <Navbar />:<></>
         }
         
         <Switch>

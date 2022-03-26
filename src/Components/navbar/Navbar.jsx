@@ -63,9 +63,10 @@ const Navbar = () => {
               </Link>
               <NavDropdown.Divider />
               <Link
-                to="/account"
+                to="/login"
                 className="linking"
                 style={{ textDecoration: "none" }}
+                onClick={()=>{localStorage.removeItem("token")}}
               >
                 <span className="linking rightLinks">Log Out</span>
               </Link>
