@@ -31,14 +31,12 @@ function App() {
         }
         
         <Switch>
-        {(token != null)?
+        
             <Route path="/" exact>
-            <Bhome />
+            {(token)?<Bhome ChanegeToken={(val)=>{setToken(val)}}/>:
+            <Main/>}
           </Route>:
-          <Route path='/' exact>
-          <Main/>
-          </Route>
-        }
+        
           <Route path="/home" exact>
             <Bhome  ChanegeToken={(val)=>{setToken(val)}}/>
           </Route>:
