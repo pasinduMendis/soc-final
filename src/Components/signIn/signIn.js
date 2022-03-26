@@ -99,7 +99,7 @@ const SignIn = (props) => {
           </button>
         </div>
       </form>
-      <a href="#" className="text-light" onClick={Forgot}>forgot password</a>
+      <a href="#" className="text-light mx-2" onClick={Forgot}>forgot password</a>
     </div>
   )
 }

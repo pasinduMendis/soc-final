@@ -30,13 +30,13 @@ const Main = (props) => {
   }
 
   return (
-    <div className='mainPage' style={{width:'100vw'}}>
-      <div className='row mainTopBar mx-3 col-12'>
-        <div className='col-6 col-lg-8 px-auto'>
-        <img src="/logo.png"alt="" className='mt-4' style={{marginLeft:'12.5%'}}/>
+    <div className='mainPage row'>
+      <div className='row mainTopBar mx-3 col-12 d-flex justify-content-center mb-md-0'>
+        <div className='col-12 col-md-6'>
+        <img src="/logo.png"alt="" className='mt-4 mx-auto mx-lg-0 d-block ' />
         </div>
         <div
-          className='col-2 col-lg-1 btn btn-lg btnSign'
+          className='col-8 mt-3 mt-md-1 mx-md-1 col-md-3 col-lg-2 my-lg-3 btn btn-lg btnSign'
           onClick={() => {
             setValue(1)
           }}
@@ -44,7 +44,7 @@ const Main = (props) => {
           Sign in
         </div>
         <div
-          className='col-2 col-lg-1 btn btn-lg btnSign'
+          className='col-8 mt-2 mt-md-1 mx-md-1 col-md-3 col-lg-2 my-lg-3 btn btn-lg btnSign'
           onClick={() => {
             setValue(2)
           }}
@@ -53,8 +53,8 @@ const Main = (props) => {
         </div>
       </div>
 
-      <div className='m-5 row'>
-        <div className=' col-lg-5 col-md-12 d-flex justify-content-center  d-none d-lg-block'>
+      <div className='mx-auto px-lg-5 row d-flex justify-content-center mb-2 mb-md-auto col-12'>
+        <div className=' col-lg-5 col-md-8 d-flex justify-content-center  d-none d-lg-block'>
           <Carousel
             autoPlay={true}
             infiniteLoop={true}
@@ -83,8 +83,11 @@ const Main = (props) => {
             </div>
           </Carousel>
         </div>
-        <div className='col-lg-7 col-md-12 d-flex justify-content-center mainContents'>
+        <div className='col-lg-6 col-10 mx-auto mainContents d-block justify-content-center'>
+
           {display()}
+
+          {value != 0? <div onClick={()=>setValue(0)} className='btn btn-sm btn-danger col-12 h-auto d-block d-lg-none'>close</div>:<></>}
         </div>
       </div>
     </div>
