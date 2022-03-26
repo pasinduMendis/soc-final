@@ -90,12 +90,12 @@ const ForgotPass = (props) => {
       const verification = (a) => {
         if (!a) {
           return (
-            <div className='row justify-content-around reg_form mt-5'>
+            <div className='row justify-content-around reg_form mt-5 ' >
                 <div className='col-8'>
-              <h1 className='text-dark mb-4 mt-3 text-center'>FORGOT PASSWORD</h1>
+              <h1 className='mb-4 mt-3 text-center text-warning' >FORGOT PASSWORD</h1>
               <form className='mx-1 mx-md-4' onSubmit={Submit}>
                 <div className='d-flex flex-row align-items-center mb-4'>
-                  <i className='fas fa-user fa-lg me-3 fa-fw' />
+                  
                   <div className='form-outline flex-fill mb-0'>
                     <p className='text-warning'>
                       your verification code was sent to {email}
@@ -109,7 +109,8 @@ const ForgotPass = (props) => {
                       onChange={(e) => setVeriCode(e.target.value)}
                     />
                     <label
-                      className='form-label text-dark'
+                      className='form-label'
+                      style={{color:"#49fb35"}}
                       htmlFor='form3Example1c'
                     >
                       verification code
@@ -138,10 +139,10 @@ const ForgotPass = (props) => {
             return (
                 <div className='row justify-content-around reg_form mt-5'>
                 <div className='col-8'>
-              <h1 className='text-dark mb-4 mt-3 text-center'>FORGOT PASSWORD</h1>
+              <h1 className=' mb-4 mt-3 text-center' style={{color:"#49fb35"}}>FORGOT PASSWORD</h1>
               <form className='mx-1 mx-md-4' onSubmit={Submit}>
                 <div className='d-flex flex-row align-items-center mb-4'>
-                  <i className='fas fa-user fa-lg me-3 fa-fw' />
+                  
                   <div className='form-outline flex-fill mb-0'>
                     <input
                       required
@@ -152,7 +153,8 @@ const ForgotPass = (props) => {
                       onChange={(e) => setEmail(e.target.value)}
                     />
                     <label
-                      className='form-label text-dark'
+                      className='form-label'
+                      style={{color:"#49fb35"}}
                       htmlFor='form3Example1c'
                     >
                       your email
@@ -160,7 +162,7 @@ const ForgotPass = (props) => {
                   </div>
                 </div>
                 <div className='d-flex flex-row align-items-center mb-4'>
-                  <i className='fas fa-user fa-lg me-3 fa-fw' />
+                  
                   <div className='form-outline flex-fill mb-0'>
                     <input
                       required
@@ -171,7 +173,8 @@ const ForgotPass = (props) => {
                       onChange={(e) => setNewPass(e.target.value)}
                     />
                     <label
-                      className='form-label text-dark'
+                      className='form-label'
+                      style={{color:"#49fb35"}}
                       htmlFor='form3Example1c'
                     >
                       new password
@@ -179,7 +182,7 @@ const ForgotPass = (props) => {
                   </div>
                 </div>
                 <div className='d-flex flex-row align-items-center mb-4'>
-                  <i className='fas fa-user fa-lg me-3 fa-fw' />
+                  
                   <div className='form-outline flex-fill mb-0'>
                     <input
                       required
@@ -190,7 +193,8 @@ const ForgotPass = (props) => {
                       onChange={(e) => setconfPass(e.target.value)}
                     />
                     <label
-                      className='form-label text-dark'
+                      className='form-label'
+                      style={{color:"#49fb35"}}
                       htmlFor='form3Example1c'
                     >
                       confirm password

@@ -27,7 +27,7 @@ const Register = () => {
           <h1 className='text-light mb-4 mt-3 text-center'>USER REGISTER</h1>
           <form className='mx-1 mx-md-4' onSubmit={Submit}>
             <div className='d-flex flex-row align-items-center mb-4'>
-              <i className='fas fa-user fa-lg me-3 fa-fw' />
+              
               <div className='form-outline flex-fill mb-0'>
                 <p className='text-warning'>
                   your verification code was sent to {email}
@@ -61,12 +61,12 @@ const Register = () => {
       )
     } else {
       return (
-        <div className='col-lg-12 justify-content-center reg_form mt-4'>
+        <div className='col-lg-12 justify-content-center reg_form mt-4 '>
           <h1 className='text-light mb-4 mt-3 text-center'>USER REGISTER</h1>
-          <form className='mx-1 mx-md-4' onSubmit={Submit}>
-            <div className='d-flex flex-row align-items-center mb-1'>
-              <i className='fas fa-user fa-lg me-3 fa-fw' />
-              <div className='form-outline flex-fill mb-0'>
+          <form className='mx-auto mx-md-4' onSubmit={Submit}>
+            <div className='d-flex justify-content-center mb-1'>
+              
+              <div className='form-outline flex-fill'>
                 <input
                   required
                   type='text'
@@ -84,7 +84,7 @@ const Register = () => {
               </div>
             </div>
             <div className='d-flex flex-row align-items-center mb-1'>
-              <i className='fas fa-envelope fa-lg me-3 fa-fw' />
+              
               <div className='form-outline flex-fill mb-0'>
                 <input
                   required
@@ -103,7 +103,7 @@ const Register = () => {
               </div>
             </div>
             <div className='d-flex flex-row align-items-center mb-1'>
-              <i className='fas fa-lock fa-lg me-3 fa-fw' />
+             
               <div className='form-outline flex-fill mb-0'>
                 <input
                   required
@@ -122,7 +122,7 @@ const Register = () => {
               </div>
             </div>
             <div className='d-flex flex-row align-items-center mb-1'>
-              <i className='fas fa-key fa-lg me-3 fa-fw' />
+              
               <div className='form-outline flex-fill mb-0'>
                 <input
                   type='password'

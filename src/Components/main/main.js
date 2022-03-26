@@ -53,7 +53,7 @@ const Main = (props) => {
         </div>
       </div>
 
-      <div className='mx-auto px-lg-5 row d-flex justify-content-center mb-2 col-12'>
+      <div className='mx-auto px-lg-5 row d-flex justify-content-center mb-2 col-12 mb-lg-auto'>
         <div className=' col-lg-5 col-md-8 d-flex justify-content-center  d-none d-lg-block'>
           <Carousel
             autoPlay={true}
@@ -83,7 +83,7 @@ const Main = (props) => {
             </div>
           </Carousel>
         </div>
-        <div className='col-lg-6 col-10 mx-auto mainContents'>
+        <div className='col-lg-6 col-10 mx-auto d-flex justify-content-center row mainContents'>
 
           {display()}
 
