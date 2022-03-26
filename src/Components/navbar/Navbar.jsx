@@ -1,4 +1,6 @@
+import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { useEffect, useState } from "react";
 import {
   Button,
   Nav,
@@ -10,6 +12,14 @@ import { Link } from "react-router-dom";
 import "./navbar.scss";
 
 const Navbar = () => {
+  const [user, setUser] = useState('')
+  var token=localStorage.getItem("token")
+  useEffect(() => {
+    axios.post('https://soc-server-web.herokuapp.com/user/getData',{token:token}).then((res)=>{
+    window.alert(res.data)
+  })
+  }, [])
+  
   return (
     <Navbars collapseOnSelect expand="lg" variant="dark" className="sticky-nav">
       <Container>
