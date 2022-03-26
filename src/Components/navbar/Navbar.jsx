@@ -11,7 +11,7 @@ import {
 import { Link } from "react-router-dom";
 import "./navbar.scss";
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [user, setUser] = useState('')
   var token=localStorage.getItem("token")
   useEffect(() => {
@@ -66,7 +66,7 @@ const Navbar = () => {
                 to="/login"
                 className="linking"
                 style={{ textDecoration: "none" }}
-                onClick={()=>{localStorage.removeItem("token")}}
+                onClick={()=>{localStorage.removeItem("token");props.ChanegeToken(null)}}
               >
                 <span className="linking rightLinks">Log Out</span>
               </Link>

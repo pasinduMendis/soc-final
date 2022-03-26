@@ -16,15 +16,18 @@ import Tickets from "./Pages/Tickets/Tickets";
 import Main from './Components/main/main'
 import Userpage from './Components/userPage/userpage'
 import ForgotPass from './Components/forgotPass/forgot'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 function App() {
-  var token=localStorage.getItem("token")
+  const [token, setToken] = useState(localStorage.getItem("token"))
+  useEffect(()=>{
+    setToken(localStorage.getItem("token"))
+  },[])
   return (
     <Router>
       <div className="app">
-        {(token != null)?
-            <Navbar />:<></>
+        {token &&
+            <Navbar ChanegeToken={(val)=>{setToken(val)}}/>
         }
         
         <Switch>
@@ -33,13 +36,13 @@ function App() {
             <Bhome />
           </Route>:
           <Route path='/' exact>
-          <Main />
+          <Main/>
           </Route>
         }
           <Route path="/home" exact>
-            <Bhome />
+            <Bhome  ChanegeToken={(val)=>{setToken(val)}}/>
           </Route>:
-          <Route path='/login'>
+          <Route path='/login' exact>
           <Main />
           </Route>
           <Route path='/user/:id' exact>

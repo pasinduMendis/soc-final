@@ -9,7 +9,7 @@ const Main = (props) => {
   const [value, setValue] = useState(0)
   const [ses, setSes] = useState('')
 
-  const display = () => {
+  const display = (props) => {
     if (value === 0) {
       //need change to 0
       return (
@@ -31,8 +31,8 @@ const Main = (props) => {
 
   return (
     <div className='mainPage row'>
-      <div className='row mainTopBar mx-3 col-12 d-flex justify-content-center mb-md-0'>
-        <div className='col-12 col-md-6'>
+      <div className='row mainTopBar mx-3 col-12 d-flex justify-content-center'>
+        <div className='col-12 col-md-5'>
         <img src="/logo.png"alt="" className='mt-4 mx-auto mx-lg-0 d-block ' />
         </div>
         <div
@@ -53,7 +53,7 @@ const Main = (props) => {
         </div>
       </div>
 
-      <div className='mx-auto px-lg-5 row d-flex justify-content-center mb-2 mb-md-auto col-12'>
+      <div className='mx-auto px-lg-5 row d-flex justify-content-center mb-2 col-12'>
         <div className=' col-lg-5 col-md-8 d-flex justify-content-center  d-none d-lg-block'>
           <Carousel
             autoPlay={true}
@@ -83,7 +83,7 @@ const Main = (props) => {
             </div>
           </Carousel>
         </div>
-        <div className='col-lg-6 col-10 mx-auto mainContents d-block justify-content-center'>
+        <div className='col-lg-6 col-10 mx-auto mainContents'>
 
           {display()}
 

@@ -6,9 +6,10 @@ import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import OngoingMovies2 from "../../Components/OngoingMovies/OngoingMovies2";
 
-const Bhome = () => {
+const Bhome = (props) => {
   useEffect(() => {
     window.scrollTo(0, 0);
+    props.ChanegeToken(localStorage.getItem("token"))
   }, []);
 
   return (
