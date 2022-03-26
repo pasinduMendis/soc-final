@@ -16,7 +16,8 @@ const Navbar = () => {
   var token=localStorage.getItem("token")
   useEffect(() => {
     axios.post('https://soc-server-web.herokuapp.com/user/getData',{token:token}).then((res)=>{
-    console.log(res.data)
+    console.log(res.data.user.user.name)
+    setUser(res.data.user.user.name)
   })
   }, [])
   
