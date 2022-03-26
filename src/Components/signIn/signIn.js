@@ -49,6 +49,7 @@ const SignIn = (props) => {
    
   }
   if (!isAuth) {
+    window.location.reload();
     return <Redirect to={urlPage} />
   }
   return (
