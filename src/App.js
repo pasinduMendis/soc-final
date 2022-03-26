@@ -38,49 +38,49 @@ function App() {
           </Route>:
         
           <Route path="/home" exact>
-            <Bhome  ChanegeToken={(val)=>{setToken(val)}}/>
+            {(token)?<Bhome  ChanegeToken={(val)=>{setToken(val)}}/>:<Main/>}
           </Route>:
           <Route path='/login' exact>
           <Main />
           </Route>
           <Route path='/user/:id' exact>
-            <Userpage />
+           {(token)?<Userpage/>:<Main/>}
           </Route>
           <Route path='/forgotPass' exact>
             <ForgotPass />
           </Route>
           <Route path="/cinemas">
-            <ListHalls />
+            {(token)?<ListHalls/>:<Main/>}
           </Route>
           <Route path="/single/:id/">
-            <BookingSingle />
+            {(token)?<BookingSingle/>:<Main/>}
           </Route>
           <Route path="/movie/:id/">
-            <BookingSingle2 />
+            {(token)?<BookingSingle2/>:<Main/>}
           </Route>
           <Route path="/seats/:id/">
-            <Seats />
+            {(token)?<Seats/>:<Main/>}
           </Route>
           <Route path="/payment">
-            <Payment />
+            {(token)?<Payment/>:<Main/>}
           </Route>
 
           <Route path="/blogs">
-            <Blogs />
+            {(token)?<Blogs/>:<Main/>}
           </Route>
           <Route path="/blog/:id">
-            <Blog />
+            {(token)?<Blog/>:<Main/>}
           </Route>
 
           <Route path="/halldetails">
-            <HallDetail />
+            {(token)?<HallDetail/>:<Main/>}
           </Route>
 
           <Route path="/food">
-            <FoodCourt />
+            {(token)?<FoodCourt/>:<Main/>}
           </Route>
           <Route path="/tickets">
-            <Tickets />
+            {(token)?<Tickets />:<Main/>}
           </Route>
         </Switch>
         <Footer />
