@@ -16,8 +16,8 @@ const Navbar = () => {
   var token=localStorage.getItem("token")
   useEffect(() => {
     axios.post('https://soc-server-web.herokuapp.com/user/getData',{token:token}).then((res)=>{
-    console.log(res.data.user.user.name)
-    setUser(res.data.user.user.name)
+    console.log(res.data.user.name)
+    setUser(res.data.user.name)
   })
   }, [])
   
@@ -53,7 +53,7 @@ const Navbar = () => {
             </Link>
           </Nav>
           <Nav>
-            <NavDropdown title="Account" id="collasible-nav-dropdown">
+            <NavDropdown title={user?user:"Account"} id="collasible-nav-dropdown">
               <Link
                 to="/tickets"
                 className="linking"
